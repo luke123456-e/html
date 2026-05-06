@@ -1,0 +1,57 @@
+<svg width="680" height="500" viewBox="0 0 680 500" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <title>Diagramma delle classi UML - Gerarchia scolastica</title>
+
+  <defs>
+    <marker id="inherit" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto">
+      <polygon points="1,1 11,6 1,11" fill="white" stroke="#555" stroke-width="1.2"/>
+    </marker>
+  </defs>
+
+  <!-- Dipendente -->
+  <rect x="215" y="30" width="250" height="170" rx="4" fill="#f9f9f9" stroke="#555" stroke-width="1"/>
+  <rect x="215" y="30" width="250" height="36" rx="4" fill="#e8e8e8" stroke="#555" stroke-width="1"/>
+  <rect x="215" y="54" width="250" height="12" fill="#e8e8e8"/>
+  <text x="340" y="52" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="bold">Dipendente</text>
+  <line x1="215" y1="66" x2="465" y2="66" stroke="#555" stroke-width="0.8"/>
+  <text x="228" y="84" dominant-baseline="central" font-size="12">- nome: String</text>
+  <text x="228" y="104" dominant-baseline="central" font-size="12">- cognome: String</text>
+  <text x="228" y="124" dominant-baseline="central" font-size="12">- stipendioBase: double</text>
+  <line x1="215" y1="138" x2="465" y2="138" stroke="#555" stroke-width="0.8"/>
+  <text x="228" y="156" dominant-baseline="central" font-size="12">+ getNome(): String</text>
+  <text x="228" y="176" dominant-baseline="central" font-size="12">+ calcolaStipendio(): double</text>
+
+  <!-- Frecce ereditarietà -->
+  <line x1="250" y1="200" x2="140" y2="290" stroke="#555" stroke-width="1.2" marker-end="url(#inherit)"/>
+  <line x1="430" y1="200" x2="540" y2="290" stroke="#555" stroke-width="1.2" marker-end="url(#inherit)"/>
+
+  <!-- Docente -->
+  <rect x="30" y="290" width="220" height="180" rx="4" fill="#f9f9f9" stroke="#555" stroke-width="1"/>
+  <rect x="30" y="290" width="220" height="36" rx="4" fill="#e8e8e8" stroke="#555" stroke-width="1"/>
+  <rect x="30" y="314" width="220" height="12" fill="#e8e8e8"/>
+  <text x="140" y="312" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="bold">Docente</text>
+  <line x1="30" y1="326" x2="250" y2="326" stroke="#555" stroke-width="0.8"/>
+  <text x="43" y="344" dominant-baseline="central" font-size="12">- materia: String</text>
+  <text x="43" y="364" dominant-baseline="central" font-size="12">- oreStraordinario: int</text>
+  <text x="43" y="384" dominant-baseline="central" font-size="12">- tariffaOraria: double</text>
+  <line x1="30" y1="398" x2="250" y2="398" stroke="#555" stroke-width="0.8"/>
+  <text x="43" y="416" dominant-baseline="central" font-size="12">+ calcolaStipendio(): double</text>
+  <text x="43" y="436" dominant-baseline="central" font-size="12">+ getMateria(): String</text>
+  <text x="43" y="456" dominant-baseline="central" font-size="12">+ toString(): String</text>
+
+  <!-- Impiegato -->
+  <rect x="430" y="290" width="220" height="180" rx="4" fill="#f9f9f9" stroke="#555" stroke-width="1"/>
+  <rect x="430" y="290" width="220" height="36" rx="4" fill="#e8e8e8" stroke="#555" stroke-width="1"/>
+  <rect x="430" y="314" width="220" height="12" fill="#e8e8e8"/>
+  <text x="540" y="312" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="bold">Impiegato</text>
+  <line x1="430" y1="326" x2="650" y2="326" stroke="#555" stroke-width="0.8"/>
+  <text x="443" y="344" dominant-baseline="central" font-size="12">- ufficio: String</text>
+  <text x="443" y="364" dominant-baseline="central" font-size="12">- oreStraordinario: int</text>
+  <text x="443" y="384" dominant-baseline="central" font-size="12">- tariffaOraria: double</text>
+  <line x1="430" y1="398" x2="650" y2="398" stroke="#555" stroke-width="0.8"/>
+  <text x="443" y="416" dominant-baseline="central" font-size="12">+ calcolaStipendio(): double</text>
+  <text x="443" y="436" dominant-baseline="central" font-size="12">+ getUfficio(): String</text>
+  <text x="443" y="456" dominant-baseline="central" font-size="12">+ toString(): String</text>
+
+  <!-- Legenda -->
+  <text x="340" y="490" text-anchor="middle" font-size="11" fill="#777">▷ ereditarietà (extends)</text>
+</svg>
